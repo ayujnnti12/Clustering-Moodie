@@ -43,7 +43,28 @@ Teknik penyeimbangan data dengan menghasilkan data sintetis pada kelas minoritas
 ## 🚀 **Panduan Menjalankan Kode**
 
 ### Prasyarat  
-Pastikan pustaka Python berikut telah terpasang:  
+Pastikan sebelum menjalankan notebook, perangkat sudah memenuhi:
+- Sistem operasi: Windows / macOS / Linux
+- Python 3.7 atau lebih baru sudah terinstal
+- Editor kode, misalnya VSCode, JupyterLab, Jupyter Notebook
+
+### Clone Repository dari Github / Download Notebook
+
+📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.ipynb)
+
+- Bukalah terminal atau CMD lalu unduh kode dati Github
+```bash
+git clone https://github.com/ayujnnti12/Clustering-Moodie.git
+cd repository-name
+```
+
+### Membuat dan Mengaktifkan Environment 
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Instal pustaka Python berikut  
 `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `imbalanced-learn`  
 
 Instalasi dengan:  
@@ -51,13 +72,11 @@ Instalasi dengan:
 pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn
 ```
 
-### Menjalankan Eksperimen Tanpa Penyeimbangan Data
-
-📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.ipynb)
-
-### Cara menjalankan:
-- Buka notebook tersebut di Jupyter Notebook, JupyterLab, atau Google Colab.
-- Jalankan setiap sel secara berurutan dengan menekan Shift + Enter.
+### Menjalankan Notebook
+- Jalankan cell satu per satu dengan klik tombol "Run" atau tekan Shift + Enter
+- Pastikan setiap cell berjalan tanpa error
+- Jika terdapat error terkait file atau data yang hilang, pastikan file pendukung sudah ada di folder yang sesuai atau unduh jika perlu
+- Unduh file dataset dan letakkan di folder yang sama dengan notebook yang ingin dijalankan: [Dataset](./data/data.csv)
 
 ### Apa yang akan dilakukan pada notebook ini?
 - **Eksplorasi Data (EDA)**  

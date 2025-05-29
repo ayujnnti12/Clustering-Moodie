@@ -53,7 +53,7 @@ pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn
 
 ### Menjalankan Eksperimen Tanpa Penyeimbangan Data
 
-📂 **Notebook:** [Clustering tanpa Penyeimbangan Data](./notebooks/clustering_tanpa_penyeimbangan.ipynb)
+📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.ipynb)
 
 ### Cara menjalankan:
 - Buka notebook tersebut di Jupyter Notebook, JupyterLab, atau Google Colab.
@@ -76,8 +76,6 @@ pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn
   Menggunakan `PCA` untuk mereduksi dimensi dan menampilkan hasil clustering dalam bentuk scatter plot.
 
 ### Menjalankan Eksperimen dengan Penyeimbangan Data (ADASYN)
-
-📂 **Notebook:** [Clustering dengan Penyeimbangan Data](./notebooks/clusteringg_dengan_penyeimbangan.ipynb)
 
 ### Cara menjalankan:
 - Buka notebook ini setelah menyelesaikan eksperimen tanpa penyeimbangan.

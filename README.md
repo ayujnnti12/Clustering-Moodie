@@ -142,23 +142,8 @@ Hasil clustering divisualisasikan dengan metode **PCA** yang mereduksi dimensi d
 
 Penelitian ini berhasil mengelompokkan responden berdasarkan data **Depression Anxiety Stress Scales (DASS)** menggunakan metode clustering **K-Means** dan **Gaussian Mixture Model (GMM)**.
 
-### Kualitas Data dan Preprocessing  
-Proses preprocessing efektif dengan:  
-- Pembersihan data menggunakan `Vocabulary Check List (VCL)` untuk menghapus data tidak valid.  
-- Normalisasi fitur menggunakan `StandardScaler` agar skala fitur seragam.  
-- Penyeimbangan data dengan `ADASYN` yang menghasilkan data sintetis untuk kelas minoritas, meningkatkan representasi dan akurasi clustering.
-
-### Pemilihan Metode Clustering  
-- **K-Means** menghasilkan cluster yang jelas tetapi kurang efektif untuk data dengan overlap cluster.  
-- **GMM** lebih fleksibel dan mampu menangani tumpang tindih cluster karena model probabilistiknya.  
-Kedua metode berhasil membagi data menjadi **empat cluster optimal** berdasarkan tingkat risiko psikologis, dari rendah hingga tinggi.
-
-### Evaluasi Model  
-Penentuan jumlah cluster optimal menggunakan:  
-- **Elbow Method** untuk melihat penurunan WCSS.  
-- **Silhouette Score** untuk menilai kualitas cluster (nilai lebih tinggi lebih baik).  
-- **Bayesian Information Criterion (BIC)** khusus untuk GMM dalam memilih model terbaik.  
-
-Nilai **Silhouette Score** yang baik dan peningkatan setelah penyeimbangan data menegaskan validitas clustering.
-
+- Penyeimbangan data menggunakan ADASYN meningkatkan performa clustering untuk kedua model, baik secara visual maupun metrik evaluasi.
+- KMeans lebih unggul dibanding GMM dalam eksperimen ini — terutama karena: (1) Silhouette score dan Calinski-Harabasz index jauh lebih tinggi, (2) Visualisasi cluster terlihat lebih bersih dan tidak banyak tumpang tindih.
+- GMM mungkin memerlukan tuning lebih lanjut atau jumlah cluster yang berbeda, karena hasilnya belum optimal, bahkan setelah ADASYN.
+  
 ---

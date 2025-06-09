@@ -37,20 +37,20 @@ Dua metode utama yang digunakan adalah:
 
 Dataset yang digunakan dalam proyek ini berjudul "Depression, Anxiety, and Stress Scales Responses (DASS-42)", diambil dari platform Kaggle. Dataset ini berisi hasil survei psikologis dari ribuan responden yang mengisi instrumen DASS-42, serta dilengkapi dengan data demografi dan kepribadian.
 
-**Karakteristik Dataset:**
+### Karakteristik Dataset:  
 
 - Jumlah data: ±39.000 entri sebelum filtering
 - Sumber: Survei daring global (tahun 2017–2019)
 - Format: CSV
 - Jumlah kolom: 172 kolom (fitur)
 
-**Fitur Utama:**
+### Fitur Utama: 
 
 - DASS-42 Items (Q1A–Q42A):
 - 42 pertanyaan dengan skala 0–3 untuk mengukur Depresi, Kecemasan, dan Stres
 - Dibagi menjadi 14 item per aspek
 
-**Demografi Responden:**
+### Demografi Responden:
 
 Usia (age), jenis kelamin (gender), pendidikan (education), status hubungan (relationship status), orientasi seksual (orientation), tempat tinggal (urban/rural), dan ukuran keluarga (familysize).
 
@@ -74,9 +74,9 @@ Pastikan sebelum menjalankan notebook, perangkat sudah memenuhi:
 - Python 3.7 atau lebih baru sudah terinstal
 - Editor kode, misalnya VSCode, JupyterLab, Jupyter Notebook
 
-### Clone Repository dari Github / Download Notebook
+### Clone Repository dari Github 
 
-📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.revisi.ipynb)
+📂 **Notebook:** [ClusteringMoodie.revisi.ipynb](./notebooks/MoodieClustering_revisi.ipynb)
 
 - Bukalah terminal atau CMD lalu unduh kode dati Github
 ```bash
@@ -96,6 +96,11 @@ venv\Scripts\activate
 Instalasi dengan:  
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn
+```
+
+### atau menginstal pustaka menggunakan requirement.txt
+```bash
+pip install -r requirements.txt
 ```
 
 ### Menjalankan Notebook
@@ -120,31 +125,11 @@ pip install numpy pandas matplotlib seaborn scikit-learn imbalanced-learn
 - **Visualisasi Hasil**  
   Menggunakan `PCA` untuk mereduksi dimensi dan menampilkan hasil clustering dalam bentuk scatter plot.
 
-### Menjalankan Eksperimen dengan Penyeimbangan Data (ADASYN)
-
-### Cara menjalankan:
-- Buka notebook ini setelah menyelesaikan eksperimen tanpa penyeimbangan.
-- Jalankan semua sel secara berurutan dengan Shift + Enter.
-
-### Apa yang akan dilakukan pada notebook ini?
-- **Penyeimbangan Data dengan ADASYN**  
-  Menghasilkan data sintetis untuk kelas minoritas agar distribusi data lebih seimbang.
-
-- **Clustering dengan K-Means dan GMM**  
-  Melakukan clustering ulang pada data yang sudah diseimbangkan.
-
-- **Evaluasi dan Visualisasi**  
-  Menggunakan metrik **Silhouette Score** dan **BIC** (untuk GMM) untuk evaluasi kualitas cluster.  
-  Visualisasi cluster dengan PCA untuk memudahkan interpretasi.
-
-- **Perbandingan Hasil**  
-  Membandingkan hasil clustering sebelum dan sesudah penyeimbangan untuk melihat dampak teknik ADASYN terhadap performa model.
-  
 ---
 
 ## 📊 **Contoh Hasil Output dan Visualisasi**
 
-Pada bagian ini, kami menyajikan contoh hasil output dan visualisasi yang dihasilkan dari penerapan algoritma **K-Means** dan **Gaussian Mixture Model (GMM)** untuk proses clustering, beserta evaluasi model dan visualisasi menggunakan **Principal Component Analysis (PCA)**.
+Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dihasilkan dari penerapan algoritma **K-Means** dan **Gaussian Mixture Model (GMM)** untuk proses *clustering*, beserta evaluasi model dan visualisasi menggunakan **Principal Component Analysis (PCA)**.
 
 ### Interpretasi dan Visualisasi Hasil
 

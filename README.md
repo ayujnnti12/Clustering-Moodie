@@ -131,30 +131,21 @@ pip install -r requirements.txt
 
 Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dihasilkan dari penerapan algoritma **K-Means** dan **Gaussian Mixture Model (GMM)** untuk proses *clustering*, beserta evaluasi model dan visualisasi menggunakan **Principal Component Analysis (PCA)**.
 
-### Interpretasi dan Visualisasi Hasil
+### Grafik Evaluasi Cluster Optimal K-Means
 
-Hasil clustering divisualisasikan dengan metode **PCA** yang mereduksi dimensi data menjadi dua komponen utama sehingga memudahkan pemahaman pola dan pemisahan antar cluster.
 
-### Visualisasi Clustering Tanpa Penyeimbangan Data (ADASYN)
-
-![Clustering Tanpa ADASYN](visualisasi/tanpa_adasyn.png)
-
-*Gambar 1: Visualisasi cluster hasil clustering tanpa menggunakan teknik penyeimbangan data.*
-
-### Visualisasi Clustering Dengan Penyeimbangan Data (ADASYN)
-
-![Clustering dengan ADASYN](visualisasi/dengan_adasyn.png)
-
-*Gambar 2: Visualisasi cluster hasil clustering setelah penyeimbangan data dengan ADASYN.*
 
 ---
 
 ## 📝 **Kesimpulan**
 
-Penelitian ini berhasil mengelompokkan responden berdasarkan data **Depression Anxiety Stress Scales (DASS)** menggunakan metode clustering **K-Means** dan **Gaussian Mixture Model (GMM)**.
+Penelitian ini membandingkan dua metode **clustering**, yaitu **K-Means dan Gaussian Mixture Model (GMM)** untuk mengelompokkan tingkat risiko kesehatan mental mahasiswa berdasarkan data survei DASS-42. Terdapat empat skenario yang diuji:
 
-- Penyeimbangan data menggunakan ADASYN meningkatkan performa clustering untuk kedua model, baik secara visual maupun metrik evaluasi.
-- KMeans lebih unggul dibanding GMM dalam eksperimen ini — terutama karena: (1) Silhouette score dan Calinski-Harabasz index jauh lebih tinggi, (2) Visualisasi cluster terlihat lebih bersih dan tidak banyak tumpang tindih.
-- GMM mungkin memerlukan tuning lebih lanjut atau jumlah cluster yang berbeda, karena hasilnya belum optimal, bahkan setelah ADASYN.
-  
+- K-Means dengan k = 4 dan k = 2 (optimal)
+- GMM dengan k = 4 dan k = 10 (optimal)
+
+Evaluasi dilakukan menggunakan **Silhouette Score, Calinski-Harabasz Index, dan Davies-Bouldin Index**. Hasil menunjukkan bahwa K-Means dengan k = 2 memberikan performa terbaik dengan nilai evaluasi tertinggi di semua metrik, menandakan pemisahan *cluster* yang jelas dan stabil. Sebaliknya, GMM dengan k = 10 menunjukkan performa terburuk, kemungkinan karena *overfitting* dan asumsi distribusi Gaussian yang tidak sesuai.
+
+Secara kualitatif, analisis menunjukkan bahwa cluster dengan kondisi mental lebih sehat umumnya berisi individu yang lebih tua, lebih stabil secara emosional, dan terbuka terhadap pengalaman baru. Kesimpulannya, K-Means (k = 2) lebih efektif dan lebih mudah diinterpretasikan untuk segmentasi kesehatan mental mahasiswa.
+
 ---

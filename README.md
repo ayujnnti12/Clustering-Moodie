@@ -183,7 +183,7 @@ Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dih
 *Gambar 10: Demografi K-Means k=2*
 
 - Demografi GMM (k=10)
-- 
+ 
 ![Demografi](visualisasi/demografigmm_k10.png)
 
 *Gambar 11: Demografi GMM k=10*

@@ -1,29 +1,58 @@
-# 🧠 **Analisis Perbandingan Clustering DASS (Depression Anxiety Stress) Menggunakan K-Means dan GMM Sebelum dan Sesudah Penyeimbangan Data dengan ADASYN**
+# 🧠 **Analisis Perbandingan Clustering DASS (Depression Anxiety Stress) Menggunakan K-Means dan Gaussian Mixture Model (GMM)**
 
 ---
 
 ## 📋 **Deskripsi Singkat Proyek**
 
-Proyek ini bertujuan menerapkan teknik **clustering** untuk mendeteksi potensi gangguan kesehatan mental pada mahasiswa menggunakan hasil survei **DASS** (Depression, Anxiety, Stress Scales).  
-Metode yang digunakan adalah **K-Means** dan **Gaussian Mixture Model (GMM)** untuk mengelompokkan mahasiswa berdasarkan risiko gangguan mental, serta membandingkan kinerja kedua metode tersebut sebelum dan sesudah penyeimbangan data menggunakan **ADASYN**.  
-**ADASYN** membantu mengatasi ketidakseimbangan data di mana jumlah responden berisiko tinggi biasanya lebih sedikit dibandingkan kelompok risiko rendah atau sedang.
+Proyek ini merupakan bagian dari Tugas Besar mata kuliah Pembelajaran Mesin di Program Studi Teknik Informatika. Tujuan utama dari proyek ini adalah menerapkan dan membandingkan dua teknik **clustering**, yaitu metode **K-Means dan Gaussian Mixture Model (GMM)** dalam mengelompokkan tingkat risiko depresi, kecemasan, dan stres berdasarkan data kuesioner **DASS-42** (Depression, Anxiety, Stress Scales).
 
 ---
 
 ## 📖 **Latar Belakang Masalah**
 
-Kesehatan mental merupakan aspek penting dalam kualitas hidup, terutama bagi mahasiswa yang sedang mengalami fase transisi menuju kedewasaan dan karier profesional. Tekanan akademik, adaptasi sosial, dan ekspektasi lingkungan sekitar menjadi pemicu utama gangguan mental.  
-Menurut data WHO, sekitar **12,5%** populasi dunia mengalami gangguan mental, termasuk mahasiswa sebagai kelompok yang rentan.  
-Di Indonesia, **Riskesdas 2018** melaporkan gangguan mental emosional pada usia 15+ mencapai **9,8%**. Beberapa kampus seperti **UNNES** telah menyediakan layanan konseling “Kawan Dengar” sebagai upaya penanganan.  
-Metode clustering dalam penelitian ini digunakan untuk deteksi dini dan pemahaman kondisi psikologis mahasiswa.
+Kesehatan mental merupakan komponen penting dalam kualitas hidup, terutama bagi mahasiswa yang sedang berada pada fase transisi menuju dunia profesional. Tekanan akademik, adaptasi sosial, tuntutan ekonomi, serta ekspektasi lingkungan menjadikan kelompok ini sangat rentan mengalami gangguan mental.
+
+Menurut World Health Organization (2022), sekitar 12,5% populasi dunia mengalami gangguan mental, dengan usia muda dewasa (termasuk mahasiswa) sebagai kelompok paling terdampak. Di Indonesia, Riskesdas 2018 mencatat bahwa 9,8% penduduk usia 15 tahun ke atas mengalami gangguan mental emosional — angka ini menunjukkan tren peningkatan dibanding tahun-tahun sebelumnya.
+
+Kasus terkini menunjukkan situasi yang mengkhawatirkan, di FISIP UI, 60% mahasiswa baru dilaporkan mengalami masalah kesehatan mental seperti stres, *overthinking*, dan kecemasan sosial. Respon terhadap fenomena ini sudah mulai dilakukan, seperti oleh Universitas Negeri Semarang (UNNES) yang meluncurkan layanan konseling gratis “Kawan Dengar” sebagai upaya preventif dan intervensi awal terhadap tekanan psikologis mahasiswa.
+
+Melihat kompleksitas masalah ini, pendekatan berbasis *data-driven* menjadi solusi yang menjanjikan. Salah satunya adalah melalui **teknik clustering**, metode *unsupervised learning* yang mampu mengelompokkan data berdasarkan pola tersembunyi tanpa memerlukan label. Dalam studi ini, **clustering** digunakan untuk mengelompokkan mahasiswa berdasarkan **skor survei DASS-42 (Depression Anxiety Stress Scales)** untuk memetakan tingkat risiko kesehatan mental.
+
+Dua metode utama yang digunakan adalah:
+
+- K-Means, yang mengelompokkan data berdasarkan kedekatan jarak ke pusat cluster.
+- Gaussian Mixture Model (GMM), yang mengasumsikan data berasal dari campuran distribusi Gaussian dan membentuk cluster berdasarkan probabilitas keanggotaan.
 
 ---
 
-## 🔍 **Deskripsi Dataset**
+## 🎯 **Tujuan Proyek**
 
-Dataset survei DASS yang digunakan terdiri dari **39.775 baris** dan **172 kolom**, berformat CSV, mencakup:
-- **42 kolom skor DASS (Q1A–Q42A)** yang merepresentasikan tingkat depresi, kecemasan, dan stres.
-- Kolom **demografis dan psikologis** lain seperti usia, jenis kelamin, dan skor kepribadian.
+- Mengelompokkan tingkat risiko kesehatan mental mahasiswa (berdasarkan gejala depresi, kecemasan, dan stres) menggunakan algoritma **clustering K-Means dan Gaussian Mixture Model (GMM)** berdasarkan data **hasil survei DASS**.
+- Menganalisis dan membandingkan hasil pengelompokan yang diperoleh dari metode **K-Means dan GMM** dalam hal struktur cluster dan relevansi dengan kondisi kesehatan mental responden.
+- Menentukan metode **clustering** yang paling optimal dalam segmentasi tingkat risiko kesehatan mental mahasiswa.
+
+--- 
+
+## 🗃️ **Deskripsi Dataset**
+
+Dataset yang digunakan dalam proyek ini berjudul "Depression, Anxiety, and Stress Scales Responses (DASS-42)", diambil dari platform Kaggle. Dataset ini berisi hasil survei psikologis dari ribuan responden yang mengisi instrumen DASS-42, serta dilengkapi dengan data demografi dan kepribadian.
+
+**Karakteristik Dataset:**
+
+- Jumlah data: ±39.000 entri sebelum filtering
+- Sumber: Survei daring global (tahun 2017–2019)
+- Format: CSV
+- Jumlah kolom: 172 kolom (fitur)
+
+**Fitur Utama:**
+
+- DASS-42 Items (Q1A–Q42A):
+- 42 pertanyaan dengan skala 0–3 untuk mengukur Depresi, Kecemasan, dan Stres
+- Dibagi menjadi 14 item per aspek
+
+**Demografi Responden:**
+
+Usia (age), jenis kelamin (gender), pendidikan (education), status hubungan (relationship status), orientasi seksual (orientation), tempat tinggal (urban/rural), dan ukuran keluarga (familysize).
 
 ---
 
@@ -34,9 +63,6 @@ Metode clustering berbasis centroid, mengelompokkan data berdasarkan jarak ke pu
 
 ### Gaussian Mixture Model (GMM)  
 Model probabilistik yang mengasumsikan data berasal dari campuran distribusi Gaussian. Lebih fleksibel dan mampu menangani cluster yang overlap.
-
-### ADASYN (Adaptive Synthetic Sampling)  
-Teknik penyeimbangan data dengan menghasilkan data sintetis pada kelas minoritas untuk mengurangi bias akibat ketidakseimbangan dataset.
 
 ---
 
@@ -50,7 +76,7 @@ Pastikan sebelum menjalankan notebook, perangkat sudah memenuhi:
 
 ### Clone Repository dari Github / Download Notebook
 
-📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.ipynb)
+📂 **Notebook:** [Clustering Moodie](./notebooks/Moodie_Clustering.revisi.ipynb)
 
 - Bukalah terminal atau CMD lalu unduh kode dati Github
 ```bash

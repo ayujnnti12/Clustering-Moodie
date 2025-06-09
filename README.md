@@ -164,18 +164,26 @@ Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dih
 
 ### Demografi dan Kepribadian per Cluster
 
+- Demografi K-Means (k=4)
+  
 ![Demografi](visualisasi/demografikmeans_k4.png)
 
 *Gambar 8: Demografi K-Means k=4*
 
-![Demografi](visualisasi/demografiGMM_k4.png)
+- Demografi GMM (k=4)
+  
+![Demografi](visualisasi/demografigmm_k4.png)
 
 *Gambar 9: Demografi GMM k=4*
 
+- Demografi K-Means (k=2)
+  
 ![Demografi](visualisasi/demografikmeans_k2.png)
 
 *Gambar 10: Demografi K-Means k=2*
 
+- Demografi GMM (k=10)
+- 
 ![Demografi](visualisasi/demografigmm_k10.png)
 
 *Gambar 11: Demografi GMM k=10*

@@ -39,7 +39,7 @@ Dataset yang digunakan dalam proyek ini berjudul "Depression, Anxiety, and Stres
 
 ### Karakteristik Dataset:  
 
-- Jumlah data: ±39.000 entri sebelum filtering
+- Jumlah data: ±39.000 responden
 - Sumber: Survei daring global (tahun 2017–2019)
 - Format: CSV
 - Jumlah kolom: 172 kolom (fitur)

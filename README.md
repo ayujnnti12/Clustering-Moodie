@@ -133,7 +133,7 @@ Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dih
 
 ### Grafik Evaluasi Cluster Optimal K-Means
 
-![Grafik Evaluasi Cluster Optimal K-Means](grafik_evaluasikmeans.png)
+![Grafik Evaluasi Cluster Optimal K-Means](visualisasi/grafik_evaluasikmeans.png)
 
 *Gambar 1: Grafik Evaluasi Cluster Optimal pada K-Means*
 

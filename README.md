@@ -138,13 +138,59 @@ Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dih
 *Gambar 1: Grafik Evaluasi Cluster Optimal pada K-Means*
 
 ### Grafik Evaluasi Cluster Optimal GMM
+
+![Grafik Evaluasi Cluster Optimal GMM](visualisasi/grafik_evaluasigmm1.png)
+![Grafik Evaluasi Cluster Optimal GMM](visualisasi/grafik_evaluasigmm2.png)
+![Grafik Evaluasi Cluster Optimal GMM](visualisasi/grafik_evaluasigmm3.png)
+![Grafik Evaluasi Cluster Optimal GMM](visualisasi/grafik_evaluasigmm4.png)
+
+*Gambar 2: Grafik Evaluasi Cluster Optimal pada GMM*
+
 ### Perbandingan Hasil Clustering
+
+![Perbandingan Hasil Clustering](visualisasi/perbandingan_hasilclustering.png)
+
+*Gambar 3: Perbandingan Hasil Clustering*
+
 ### Profil Cluster K-Means dan GMM
+
+| ![Profil Metode](visualisasi/profilkmeans_k4.png) | ![Profil Metode](visualisasi/profilgmm_k4.png) |
+|:--:|:--:|
+| *Gambar 4: Profil Cluster K-Means k=4* | *Gambar 5: Profil Cluster GMM k=4* |
+
+| ![Profil Metode](visualisasi/profilkmeans_k2.png) | ![Profil Metode](visualisasi/profilgmm_k10.png) |
+|:--:|:--:|
+| *Gambar 6: Profil Cluster K-Means k=2* | *Gambar 7: Profil Cluster GMM k=10* |
+
 ### Demografi dan Kepribadian per Cluster
+
+![Demografi](visualisasi/demografikmeans_k4.png)
+
+*Gambar 8: Demografi K-Means k=4*
+
+![Demografi](visualisasi/demografiGMM_k4.png)
+
+*Gambar 9: Demografi GMM k=4*
+
+![Demografi](visualisasi/demografikmeans_k2.png)
+
+*Gambar 10: Demografi K-Means k=2*
+
+![Demografi](visualisasi/demografigmm_k10.png)
+
+*Gambar 11: Demografi GMM k=10*
+
 ### Evaluasi Model
+
+![Evaluasi Model](visualisasi/evaluasi_model.png)
+
+*Gambar 12: Evaluasi Model*
+
 ### Heatmap Evaluasi Perbandingan Semua Metode
 
+![Heatmap](visualisasi/heatmap_perbandingan.png)
 
+*Gambar 13: Heatmap Perbandingan*
 
 ---
 

@@ -129,9 +129,14 @@ pip install -r requirements.txt
 
 ## 📊 **Contoh Hasil Output dan Visualisasi**
 
-Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dihasilkan dari penerapan algoritma **K-Means** dan **Gaussian Mixture Model (GMM)** untuk proses *clustering*, beserta evaluasi model dan visualisasi menggunakan **Principal Component Analysis (PCA)**.
+Pada bagian ini, penulis menyajikan contoh hasil output dan visualisasi yang dihasilkan dari penerapan algoritma **K-Means** dan **Gaussian Mixture Model (GMM)** untuk proses *clustering*, beserta evaluasi model dan visualisasi.
 
 ### Grafik Evaluasi Cluster Optimal K-Means
+
+![Grafik Evaluasi Cluster Optimal K-Means](grafik_evaluasikmeans.png)
+
+*Gambar 1: Grafik Evaluasi Cluster Optimal pada K-Means*
+
 ### Grafik Evaluasi Cluster Optimal GMM
 ### Perbandingan Hasil Clustering
 ### Profil Cluster K-Means dan GMM
